@@ -1,5 +1,3 @@
 .vscode
-libmodbus
 *.o
-rtu_master
-rtu_slave
+iddp-label
