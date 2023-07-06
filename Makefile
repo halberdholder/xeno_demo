@@ -9,8 +9,8 @@ TARGET = $(patsubst %.c, %, $(notdir ${SRC}))
 
 CC = gcc
 CFLAGS = -Wall -O2
-CFLAGS += $(shell xeno-config --posix --cflags)
-LDFLAGS = $(shell xeno-config --posix --ldflags)
+CFLAGS += $(shell xeno-config --posix --alchemy --cflags)
+LDFLAGS = $(shell xeno-config --posix --alchemy --ldflags)
 
 all:${TARGET}
 
