@@ -126,7 +126,7 @@ static void catch_signal(int sig)
 {
 	cleanup_all();
 	printf(MAIN_PREFIX "exit\n");
-	return;
+	exit(0);
 }
 
 static void write_task_proc(void *arg)
@@ -164,6 +164,8 @@ static void write_task_proc(void *arg)
 			printf(WTASK_PREFIX "only %d / %zd byte transmitted\n",
 			       written, sz);
 			break;
+		} else {
+			printf(WTASK_PREFIX "write %d bytes\n", written);
 		}
 	}
 
