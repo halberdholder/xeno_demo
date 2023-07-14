@@ -241,7 +241,7 @@ static void read_task_proc(void *arg)
                 printf("%6d |%16llu |%16llu |%16llu\n", nr,
                        irq_time - write_time,
                        read_time - irq_time,
-                       read_time - write_time);
+                       escap);
             if (nr % 10000 == 0)
             {
                 printf("%6s |%16s |%16s |%16llu\n", "mini", "", "", mini);
